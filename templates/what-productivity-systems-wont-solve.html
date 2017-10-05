@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="/static/css/style2.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,500i,700,900" rel="stylesheet">
+	  	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+		<script src='/static/js/script.js'></script>
+		<link rel="stylesheet" type='text/css' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+		<meta charset="UTF-8">
+		<title> What Productivity Systems Won't Solve </title>
+</head>
+<body>
+	<div id='topbar'>
+			<ul id="menu">
+				<li style= "opacity: 0.7;"><a href="{{ url_for('to_about') }}">About</a></li>
+				<li style= "opacity: 0.7;"><a href="{{ url_for('to_index') }}">Blog Posts</a></li>
+				<li style= "opacity: 0.7;"><a href="{{ url_for('to_contact') }}">Contact Us</a></li>
+			</ul>
+	</div>
+		<div id="about">
+			<div id="about-container">
+				<h1>What Productivity Systems Won't Solve</h1>
+<h2>By Leo Babauta</h2>
+<p>If you're like me, you're always looking for the perfect productivity system. Unfortunately, it doesn't exist.</p>
+<p>The problem isn't with the productivity system — the problem is that none of them can solve a few really important (and related) problems:</p>
+<ol>
+<li>Procrastination</li>
+<li>Fear of uncertainty</li>
+<li>Fear of discomfort</li>
+</ol>
+<p>For example, at the top of my to-do list today is "write Zen Habits post" and "write intro to declutter course"... pretty simple, right? Two fairly straightforward tasks. But as I started this post, I went to check and respond to email, sent a message to my wife, checked on my finances, cleaned the kitchen a little. I'm super productive at the little things when I'm putting off the big tasks!</p>
+<p>No matter how good the productivity system is, <em>it falls apart when I start procrastinating.</em></p>
+<p>When a task is uncomfortable, I procrastinate, just like most people. When I'm facing a lot of uncertainty with a task, I procrastinate. Like most of us.</p>
+<p>Often, we'll work on a new productivity system, try out a new to-do list app, start organizing, or start getting our email inbox to zero, or start reading about a new way to be productive (like you are now)... <em>all as a way to procrastinate on uncertain or uncomfortable tasks.</em></p>
+<p>And it's so much easier to follow the path of distractions and little tasks, than to face a big important but scary task. It's easy to go to your bank's website to check your balance, check on your favorite blogs and news sites, pop open your favorite social media network, and so on. These have no barrier to entry, and always give you some reward, while difficult tasks give you negative feedback and have obstacles to getting started. Not a fair fight, huh?</p>
+<p>So how do we deal with this? A few important methods:</p>
+<ol>
+<li><p><strong>Take a step back.</strong> You have to get away from the distractions and little tasks. Step away from the computer, and go outside, go for a walk, take a shower, meditate, or just sit doing nothing for one minute. That's all it takes. Step back and think about what you should be doing right now, rather than what's easiest and most tempting.</p></li>
+<li><p><strong>Remember who you're doing this for.</strong> As you step back, think about the person who will benefit from you doing this important task. Is it a co-worker, client, customer, loved one? Is it you? How will it make their life better? Maybe it'll make something easier for them, but maybe it'll solve a real pain point or meet an important need. I've found that I procrastinate when I'm focused on my own comfort, but push through procrastination when I'm focused on helping others.</p></li>
+<li><p><strong>Let yourself dive into the discomfort.</strong> Clear away distractions, just have what you need to do this one task, and allow yourself to be uncomfortable for a few minutes. Yes, it sucks, but it's actually not that bad once you get started. It's like diving into cold water — just dive in, don't think about it. Once you're in, relax into the discomfort, and see that it's not as bad as you feared.</p></li>
+<li><p><strong>Embrace the uncertainty.</strong> A lot of time it's a fear of uncertainty that holds us back. We don't know how to do something, or how things will turn out, and that freaks us out a bit. We don't want to work on something like that, or even think about it. We avoid and procrastinate and rationalize. Instead, see uncertainty as a necessary part of life (who wants a life where you know how everything would turn out? super boring)... and see it as an exciting part of life, one that is filled with wonder, curiosity, learning, exploration and adventure. Instead of looking at uncertainty as a bad thing, embrace it and see if you can get good at exploring it. Like discomfort, dive in and relax into it.</p></li>
+<li><p><strong>Do it in little bits.</strong> Yes, uncertainty and discomfort can be difficult. So don't kill yourself trying to master them... just do it in small doses. Work on the task for just a few minutes, then walk around and take a break. Then sit down and focus again, relaxing into the discomfort and uncertainty. Repeat.</p></li>
+</ol>
+<p>With this kind of mindful practice, you're training yourself to get good at discomfort and uncertainty. This is a wonderful skill to get good at!</p>
+<p>And in the end, not only will you be facing down the most difficult aspect of productivity, you'll be doing something good for others in the process.</p>
+</div>
+</div>
+<div> 
+	<h1> Comments</h1>
+	<div id='comments' style='padding-bottom: 50px;'> </div>
+</div>
+	<div>
+		<form id='form'>
+			Name:<br>
+			<input id='name' type="text"><br>
+			<br>
+			Message:<br>
+			<textarea id='message' rows="10" cols="50"></textarea>
+			<br>
+		</form>
+		<button id ='submit' onclick='submitComment5()'> Submit </button>
+	</div>
+<div class="footer">
+    			<ul id="menu-footer">
+				<li style= "opacity: 0.7;"><a href="{{ url_for('to_about') }}">About</a></li>
+				<li style= "opacity: 0.7;"><a href="{{ url_for('to_index') }}">Blog Posts</a></li>
+				<li style= "opacity: 0.7;"><a href="{{ url_for('to_contact') }}">Contact Us</a></li>
+			</ul>
+</div>
+<script>
+// self executing function here
+(function() {
+	try {
+		var names = JSON.parse(localStorage.names5);
+		var comments = JSON.parse(localStorage.comments5);
+		for (comment in comments) {
+			var newDiv = document.createElement("div");
+			var newContent = document.createTextNode(comments[comment] + ' - ' + names[comment]); 
+			newDiv.appendChild(newContent);
+			var currentDiv = document.getElementById("comments");
+			currentDiv.appendChild(newDiv); 
+			}
+		} catch(e) {
+			console.log(e)
+	}
+})();
+</script>
+</body>
+</html>

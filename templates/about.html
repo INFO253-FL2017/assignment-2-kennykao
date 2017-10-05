@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="static/css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,500i,700,900" rel="stylesheet">
+	  	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+		<link rel="stylesheet" type='text/css' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+		<title> About Me </title>
+		<meta charset="UTF-8">
+
+	</head>
+
+	<body>
+		<div id='topbar'>
+		<div id='header'>
+			Kenny Kao
+		</div>
+			<ul id="menu">
+				<li style="font-weight: 800;">About</li>
+				<li style= "opacity: 0.7;"><a href="{{ url_for('to_index') }}">Blog Posts</a></li>
+				<li style= "opacity: 0.7;"><a href="{{ url_for('to_contact') }}">Contact Us</a></li>
+			</ul>
+	</div>
+
+		<div id="about">
+			<div id="about-container">
+				<div id="about-text">
+					
+					<h1>Hi! <span style='color: #39CCCC;'>~</span></h1>
+					
+				
+					<p> I'm a fourth-year computer science major at UC Berkeley. I came into college as a pre-med business double major, but I found out my passion for coding after taking an intro CS class on a dare. Last year I worked as a <b> network operations intern at Maker Studios - Disney </b>, and now I'm working as a <b> software engineer intern at Splunk!</b> </p>
+			
+					<p> Hope you enjoy this blog! :) </p>
+
+				</div>
+			</div>
+		</div>
+
+<div class="footer">
+    			<ul id="menu-footer">
+				<li style="font-weight: 800;">About</li>
+				<li style= "opacity: 0.7;"><a href="{{ url_for('to_index') }}">Blog Posts</a></li>
+				<li style= "opacity: 0.7;"><a href="{{ url_for('to_contact') }}">Contact Us</a></li>
+			</ul>
+</div>
+</body>
+</html>
