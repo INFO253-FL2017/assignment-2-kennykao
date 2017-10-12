@@ -16,9 +16,9 @@
 <body>
 	<div id='topbar'>
 			<ul id="menu">
-				 <li style= "opacity: 0.7;"><a href="about.html">About</a></li>
-				<li style= "opacity: 0.7;"><a href="index.html">Blog Posts</a></li>
-				<li style= "opacity: 0.7;"><a href="contact.html">Contact Us</a></li>
+				<li style= "opacity: 0.7;"><a href="{{ url_for('to_about') }}">About</a></li>
+				<li style= "opacity: 0.7;"><a href="{{ url_for('to_index') }}">Blog Posts</a></li>
+				<li style= "opacity: 0.7;"><a href="{{ url_for('to_contact') }}">Contact Us</a></li>
 			</ul>
 	</div>
 		<div id="about">
@@ -64,9 +64,9 @@
 	</div>
 <div class="footer">
     			<ul id="menu-footer">
-				<li style= "opacity: 0.7;"><a href="about.html">About</a></li>
-				<li style= "opacity: 0.7;"><a href="index.html">Blog Posts</a></li>
-				<li style= "opacity: 0.7;"><a href="contact.html">Contact Us</a></li>
+				<li style= "opacity: 0.7;"><a href="{{ url_for('to_about') }}">About</a></li>
+				<li style= "opacity: 0.7;"><a href="{{ url_for('to_index') }}">Blog Posts</a></li>
+				<li style= "opacity: 0.7;"><a href="{{ url_for('to_contact') }}">Contact Us</a></li>
 			</ul>
 </div>
 <script>

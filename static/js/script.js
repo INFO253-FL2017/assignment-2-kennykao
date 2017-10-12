@@ -3,6 +3,7 @@ var submit = function() {
 	input_name = document.getElementById('name');
 	input_subject = document.getElementById('subject');
 	input_message = document.getElementById('message');
+	input_email = document.getElementById('email');
 	final_message = document.getElementById('final');
 	var missing_inputs = '';
 
@@ -13,6 +14,9 @@ var submit = function() {
 		if (!input_subject.value) {
 			missing_inputs += 'subject ';
 		}
+		if (!input_email.value) {
+			missing_inputs += 'email '
+		}
 		if (!input_message.value) {
 			missing_inputs += 'message'
 		}
@@ -21,7 +25,7 @@ var submit = function() {
 	else {
 		var xhttp = new XMLHttpRequest();
 		xhttp.open("POST","/f",true);
-		s = xhttp.send('{"name":"' + input_name.value  + '","subject":"' + input_subject.value + '","msg":"' + input_message.value + '"}')
+		s = xhttp.send('{"name":"' + input_name.value  + '","email":"' +  input_email.value + '","subject":"' + input_subject.value + '","msg":"' + input_message.value + '"}')
 		input_message.value = "";
 		input_subject.value = "";
 		final_message.innerHTML = 'Hi ' + input_name.value + ', your message has been sent';
